@@ -541,7 +541,7 @@ iptables -t nat -A PREROUTING -i tun+ -p tcp --dport 80 -j REDIRECT --to-port 80
 	./easyrsa build-client-full "$CLIENT" nopass
 	./easyrsa gen-crl
 
-	openvpn --genkey secret /etc/openvpn/easy-rsa/pki/private/ta.key    #generate TLS key for additional security
+	openvpn --genkey --secret /etc/openvpn/easy-rsa/pki/private/ta.key    #generate TLS key for additional security
 
 
 	# Move the stuff we need
